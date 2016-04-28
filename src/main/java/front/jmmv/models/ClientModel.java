@@ -1,13 +1,13 @@
 package front.jmmv.models;
 
+import org.springframework.web.client.RestTemplate;
+
 import front.jmmv.entities.Client;
 
 public class ClientModel {
 	public Client getClient(int clientId) {
-		Client client = new Client();
-		client.setId(clientId);
-		client.setPrenom("tom");
-		client.setNom("phi");
+		RestTemplate restTemplate = new RestTemplate();
+		Client client = restTemplate.getForObject("http://localhost/client1.json", Client.class);
 		return client;
 	}
 }
