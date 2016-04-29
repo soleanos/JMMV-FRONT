@@ -5,7 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<p th:text="'Yo ' + ${client.getPrenom()} + ${client.getNom()} + ' !'" />
-    <p th:text="'ID : ' + ${client.getId()}" />
+	
+	<form action="#" th:action="@{/client/add}" th:object="${client}" method="post">
+        <p>Prenom : <input type="text" th:field="*{prenom}" /></p>
+        <p>Nom : <input type="text" th:field="*{nom}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+
 </body>
 </html>
