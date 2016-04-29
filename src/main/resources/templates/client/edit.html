@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>JMMV - Front</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p th:text="'Yo ' + ${client.getPrenom()} + ${client.getNom()} + ' !'" />
+    <p th:text="'ID : ' + ${client.getId()}" />
+</body>
+</html>
