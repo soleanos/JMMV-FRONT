@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>JMMV - Front</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p>Liste des clients</p>
+    <table>
+    	<thead>
+    		<tr>
+    			<th>Nom</th>
+    			<th>Prenom</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr th:each="client: ${clients}">
+	      		<td th:text="${client.nom}">nom</td>
+	      		<td th:text="${client.prenom}">prenom</td>
+		    </tr>
+    	</tbody>
+    </table>
+</body>
+</html>
