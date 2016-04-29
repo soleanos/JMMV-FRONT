@@ -5,8 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+	<h1>Add Client Form</h1>
 	
-	<form action="#" th:action="@{/client/add}" th:object="${client}" method="post">
+	<form action="#" th:action="@{/client}" th:object="${client}" method="post">
         <p>Prenom : <input type="text" th:field="*{prenom}" /></p>
         <p>Nom : <input type="text" th:field="*{nom}" /></p>
         <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>

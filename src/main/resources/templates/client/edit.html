@@ -5,8 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+    <h1>Edit Client Form</h1>
     
-    <form action="#" th:action="@{/client/edit}" th:object="${client}" method="post">
+    <form action="#" th:action="@{/client}" th:object="${client}" method="post">
     	<p th:text="'ID : ' + ${client.getId()}" />
     	<p th:text="'Prenom actuel : ' + ${client.getPrenom()}" />
         <p>Nouveau prenom : <input type="text" th:field="*{prenom}" /></p>
